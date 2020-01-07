@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    background-color: rgb(33, 77, 112);
+    color: #ffffff;
+}
+
+img {
+    width: 50%;
+}
+
+header {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3, span {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+header a:hover {
+    color: #fee856;
+    border-bottom: 1px solid #ffffff;
+}
+
+a.active {
+    border-bottom: 2px solid #fee856;
+}
+
+nav a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+/* Main */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#peace {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+#job {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#peace, #job {
+    text-align: center;
+    letter-spacing: .3rem;
+    padding-bottom: 20px;
+}
+
+#more {
+    display: inline-block;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fee856;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
+/* About page */
+.about {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.me {
+    margin-top: 50px;
+}
+
+main h3 {
+    margin: 30px 0 20px;
+    text-align: center;
+}
+
+.doings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+}
+
+#png {
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+#head {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#info {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.skills {
+    margin-top: 40px;
+    letter-spacing: 0;
+    font-size: 20px;
+}
+
+#js {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Porfolio page */
+.portfolio {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    padding: 20px 0;
+}
+
+.projects > div {
+    padding: 20px 0;
+}
+
+.projects > div > * {
+    padding: 10px 0;
+}
+
+.one a {
+    text-decoration: none;
+    color: #ffffff;
+}
