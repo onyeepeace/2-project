@@ -1,0 +1,273 @@
+// Colors
+$black: #151515;
+$white: #f1f1f1;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $black;
+    color: $white;
+}
+
+// Animation
+.animate-in {
+    -webkit-animation: fadeIn .5s ease-in;
+    animation: fadeIn .5s ease-in;
+}
+
+.animate-out {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+img {
+    width: 100%;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+i {
+    color: lightskyblue;
+}
+
+// left column
+.left {
+    padding: 2rem 5%;
+    .info {
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding-bottom: 2rem;
+        }
+        p {
+            line-height: 2.2;
+            letter-spacing: 0.1rem;
+            padding-bottom: 2rem;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $white;
+        }
+    }
+    .social-links {
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 .5rem 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid $white;
+        }
+    }
+}
+
+// right column
+.right {
+    padding: 2rem 5% 0;
+    .projects {
+        > div {
+            padding-bottom: 1rem;
+            background-color: #f9f9f9;
+            color: $black;
+            margin-bottom: 2rem;
+            text-align: center;
+            .text {
+                font-weight: 700;
+                font-size: 18px;
+                .first {
+                    padding-bottom: .5rem;
+                }
+                a {
+                    display: inline-block;
+                    color: $black;
+                    padding: 0.5rem .2rem;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// project animation
+.block{
+    -webkit-animation:scaledown 1s linear;
+    -moz-animation:scaledown 1s linear;
+    animation:scaledown 1s linear;
+    transform-origin:50% 50%;
+    animation-fill-mode: forwards;
+}
+  
+.block:hover{
+    z-index:100;
+    -webkit-animation:scale 1s linear;
+    -moz-animation:scale 1s linear;
+    animation:scale 1s linear;
+    transform-origin:50% 50%;
+    animation-fill-mode: forwards;
+}
+  
+  
+  
+@keyframes scale{
+    0%{
+        transform:scale(1.0);
+    }
+    100%{
+        transform:scale(1.1);
+        -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+        -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+        box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+    }
+}
+  
+@keyframes scaledown{
+    0%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1.0);
+    }
+}
+  
+// Media queries
+@media screen and (min-width:760px) {
+    .left {
+        padding: 2rem 10%;
+    }
+    .right {
+        padding: 2rem 10% 0;
+        img {
+        }
+        .projects {
+            width: 75%;
+            margin: 2rem auto;
+            > div {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left {
+        height: 100vh;
+        padding: 8rem 10% 0;
+        .info {
+            .in {
+                display: flex;
+                justify-content: center;
+                .name {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 2rem;
+                    align-items: center;
+                    h1 {
+                        font-size: 40px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        padding-bottom: 2rem;
+                        writing-mode: vertical-rl;
+                    }
+                    p {
+                        line-height: 2.2;
+                        letter-spacing: 0.1rem;
+                        padding-bottom: 2rem;
+                    }
+                }
+            }
+            a {
+                margin-bottom: 2rem;
+            }
+        }
+        .social-links {
+            a {
+                margin: 0 1rem 1rem;
+            }
+            #tweet {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .right {
+        padding: 4rem 15% 0;
+        overflow-y: scroll;
+        height: 100vh;
+        &::after, &::before {
+            content: '';
+            display: block;
+        }
+        .projects {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width:2500px) {
+    .left {
+        padding: 12rem 8% 0;
+        .info {
+            h1 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 32px;
+            }
+            a {
+                font-size: 16px;
+                margin-bottom: 2rem;
+            }
+        }
+        .social-links {
+            a {
+                font-size: 16px;
+                margin: 0 1rem 2rem;
+            }
+        }
+    }
+}
