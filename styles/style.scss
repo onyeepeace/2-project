@@ -113,13 +113,24 @@ i {
             .text {
                 font-weight: 700;
                 font-size: 18px;
+                font-family: monospace;
                 .first {
                     padding-bottom: .5rem;
+                    text-transform: uppercase;
+                    background: none;
+                }
+                mark {
+                    display: inline-block;
+                    margin: 10px 0;
+                    padding: 5px 20px;
+                    background-color: lightskyblue;
+                    opacity: 0.5;
+                    border-radius: 25px;
                 }
                 a {
                     display: inline-block;
                     color: $black;
-                    padding: 0.5rem .2rem;
+                    padding: 0.5rem .2rem; 
                     font-size: 14px;
                 }
             }
@@ -175,8 +186,6 @@ i {
     }
     .right {
         padding: 2rem 10% 0;
-        img {
-        }
         .projects {
             width: 75%;
             margin: 2rem auto;
