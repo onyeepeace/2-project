@@ -118,11 +118,12 @@ i {
                     padding-bottom: .5rem;
                     text-transform: uppercase;
                     background: none;
+                    font-size: 16px;
                 }
                 mark {
                     display: inline-block;
                     margin: 10px 0;
-                    padding: 5px 20px;
+                    padding: 3px 10px;
                     font-size: 12px;
                     background-color: #87cefa;
                     opacity: 0.5;
@@ -277,6 +278,18 @@ i {
             a {
                 font-size: 16px;
                 margin: 0 1rem 2rem;
+            }
+        }
+    }
+
+    .right {
+        .projects {
+            > div {
+                .text {
+                    .first {
+                        font-size: 28px;
+                    }
+                }
             }
         }
     }
