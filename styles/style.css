@@ -146,70 +146,14 @@ i {
 }
 
 .block {
-  -webkit-animation: scaledown 1s linear;
-  animation: scaledown 1s linear;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .block:hover {
-  z-index: 100;
-  -webkit-animation: scale 1s linear;
-  animation: scale 1s linear;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes scale {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-box-shadow: 10px 10px 60px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 10px 60px 10px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@keyframes scale {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-box-shadow: 10px 10px 60px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 10px 60px 10px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@-webkit-keyframes scaledown {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scaledown {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
 }
 
 @media screen and (min-width: 760px) {
@@ -281,6 +225,9 @@ i {
     margin-left: 0;
   }
   .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 4rem 15% 0;
     overflow-y: scroll;
     height: 100vh;
@@ -288,6 +235,24 @@ i {
   .right::after, .right::before {
     content: '';
     display: block;
+  }
+  .right #scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 1rem;
+    font-weight: 700;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+  }
+  .right #scroll::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 90px;
+    background-color: #f1f1f1;
+    margin: 1rem auto 0;
   }
   .right .projects {
     width: 100%;
