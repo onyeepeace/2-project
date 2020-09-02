@@ -103,6 +103,9 @@ i {
 // right column
 .right {
     padding: 2rem 5% 0;
+    #scroll {
+        display: none;
+    }
     .projects {
         > div {
             padding-bottom: 1rem;
