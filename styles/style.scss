@@ -66,6 +66,7 @@ i {
             font-size: 40px;
             font-weight: 400;
             text-transform: uppercase;
+            letter-spacing: 0.2rem;
             padding-bottom: 2rem;
         }
         p {
@@ -231,6 +232,7 @@ i {
             display: flex;
             padding-left: 1rem;
             font-weight: 700;
+            letter-spacing: 0.1rem;
             writing-mode: vertical-rl;
             &::after {
                 content: "";

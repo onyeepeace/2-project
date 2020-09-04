@@ -70,6 +70,7 @@ i {
   font-size: 40px;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
   padding-bottom: 2rem;
 }
 
@@ -246,6 +247,7 @@ i {
     display: flex;
     padding-left: 1rem;
     font-weight: 700;
+    letter-spacing: 0.1rem;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
