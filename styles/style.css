@@ -229,6 +229,12 @@ i {
   .left .social-links #tweet {
     margin-left: 0;
   }
+  .fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+  }
+  .fa-angle-down:before {
+    content: "\f107";
+  }
   .right {
     display: -webkit-box;
     display: -ms-flexbox;
