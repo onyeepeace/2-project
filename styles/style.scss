@@ -229,8 +229,9 @@ i {
             display: block;
         }
         #scroll {
+            position: fixed;
             display: flex;
-            padding-left: 1rem;
+            right: 6%;
             font-weight: 700;
             letter-spacing: 0.1rem;
             writing-mode: vertical-rl;

@@ -242,10 +242,11 @@ i {
     display: block;
   }
   .right #scroll {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-left: 1rem;
+    right: 6%;
     font-weight: 700;
     letter-spacing: 0.1rem;
     -webkit-writing-mode: vertical-rl;
